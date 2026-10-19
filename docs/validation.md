@@ -1,6 +1,6 @@
 # Local validation
 
-Validated on 2026-10-19 using a newly created `footstep_planner_paper` Conda
+Validated on 2026-10-19 using a newly created `footstep_planner` Conda
 environment from the root environment specification. Python dependencies are
 pinned in `requirements.lock.txt`; CPU PyTorch is sufficient.
 

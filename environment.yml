@@ -1,4 +1,4 @@
-name: footstep_planner_paper
+name: footstep_planner
 channels:
   - conda-forge
 dependencies:

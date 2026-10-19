@@ -1,6 +1,6 @@
 # Reproduction guide and provenance
 
-Run all commands from the repository root with `footstep_planner_paper` active.
+Run all commands from the repository root with `footstep_planner` active.
 Reference files are in `data/` and `paper/`; new runs go to `outputs/`.
 `paper/artifact_manifest.json` records the preserved files' SHA-256 hashes.
 
@@ -120,5 +120,5 @@ but is not asserted to recreate the older GPU-generated dataset exactly.
 The fixed benchmark files are therefore the reference inputs.
 
 `requirements.lock.txt` records the validated Linux Python environment.
-Existing local Conda environments were preserved; `footstep_planner_paper` is
+Existing local Conda environments were preserved; `footstep_planner` is
 the integrated project's environment. No personal MOSEK license is tracked.

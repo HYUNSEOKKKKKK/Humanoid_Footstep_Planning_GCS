@@ -21,7 +21,7 @@ uses CPU PyTorch; a GPU is not required. Run commands from the repository root.
 git clone https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS.git
 cd Humanoid_Footstep_Planning_GCS
 conda env create -f environment.yml
-conda activate footstep_planner_paper
+conda activate footstep_planner
 python -m pip check
 python -m experiments.verify_artifacts
 ```
