@@ -1,0 +1,304 @@
+['7', '5', '1', '5', '7', '3', '5', '9', '7', '5', '1', '9', '1', '3', '7', '3', '1', '9', '5', '9', '1', '9', '7', '5', '1', '3', '1', '3', '1', '9', '7', '9', '5', '9', '7', '3', '7', '3', '5', '3', '7', '9', '5', '5', '1', '5', '7', '9', '7', '3', '5', '3', '1', '3', '1', '9', '7', '9', '5', '9', '5', '3', '1', '5', '7', '9', '7', '9', '5', '3', '7', '9', '7', '9', '5', '5', '7', '9', '5', '3', '1', '3', '1', '3', '7', '9', '7', '5', '7', '3', '5', '9', '5', '9', '7', '5', '1', '9', '5', '3']
+['All', 'UR', 'UL', 'DR', 'C', 'UR']
+[relaxed] Cost = 2.219139
+[fixed] Cost = 2.219138
+['UR', 'UL', 'DR', 'C', 'UR', 'UL']
+[relaxed] Cost = 2.266335
+[fixed] Cost = 2.266332
+['UL', 'DR', 'C', 'UR', 'UL', 'C']
+[relaxed] Cost = 2.156830
+[fixed] Cost = 2.160378
+['DR', 'C', 'UR', 'UL', 'C', 'DL']
+[relaxed] Cost = 2.891668
+[fixed] Cost = 2.895150
+['C', 'UR', 'UL', 'C', 'DL', 'C']
+[relaxed] Cost = 2.806374
+[fixed] Cost = 2.807626
+['UR', 'UL', 'C', 'DL', 'C', 'UL']
+[relaxed] Cost = 2.791139
+[fixed] Cost = 2.792381
+['UL', 'C', 'DL', 'C', 'UL', 'DR']
+[relaxed] Cost = 2.926844
+[fixed] Cost = 2.926842
+['C', 'DL', 'C', 'UL', 'DR', 'C']
+[relaxed] Cost = 2.118317
+[fixed] Cost = 2.118312
+['DL', 'C', 'UL', 'DR', 'C', 'UR']
+[relaxed] Cost = 2.116403
+[fixed] Cost = 2.116402
+['C', 'UL', 'DR', 'C', 'UR', 'UL']
+[relaxed] Cost = 2.272448
+[fixed] Cost = 2.272444
+['UL', 'DR', 'C', 'UR', 'UL', 'C']
+[relaxed] Cost = 2.063537
+[fixed] Cost = 2.067082
+['DR', 'C', 'UR', 'UL', 'C', 'DL']
+[relaxed] Cost = 2.876440
+[fixed] Cost = 2.879921
+['C', 'UR', 'UL', 'C', 'DL', 'UR']
+[relaxed] Cost = 2.947831
+[fixed] Cost = 2.949606
+['UR', 'UL', 'C', 'DL', 'UR', 'DL']
+[relaxed] Cost = 3.426326
+[fixed] Cost = 3.428103
+['UL', 'C', 'DL', 'UR', 'DL', 'DR']
+[relaxed] Cost = 2.865570
+[fixed] Cost = 2.865567
+['C', 'DL', 'UR', 'DL', 'DR', 'UL']
+[relaxed] Cost = 2.304219
+[fixed] Cost = 2.304217
+['DL', 'UR', 'DL', 'DR', 'UL', 'DR']
+[relaxed] Cost = 2.782546
+[fixed] Cost = 2.782543
+['UR', 'DL', 'DR', 'UL', 'DR', 'DL']
+[relaxed] Cost = 2.221918
+[fixed] Cost = 2.221915
+['DL', 'DR', 'UL', 'DR', 'DL', 'UR']
+[relaxed] Cost = 2.440230
+[fixed] Cost = 2.440228
+['DR', 'UL', 'DR', 'DL', 'UR', 'C']
+[relaxed] Cost = 2.942837
+[fixed] Cost = 2.942834
+['UL', 'DR', 'DL', 'UR', 'C', 'UR']
+[relaxed] Cost = 2.017499
+[fixed] Cost = 2.017498
+['DR', 'DL', 'UR', 'C', 'UR', 'DL']
+[relaxed] Cost = 2.866935
+[fixed] Cost = 2.866932
+['DL', 'UR', 'C', 'UR', 'DL', 'UR']
+[relaxed] Cost = 2.645725
+[fixed] Cost = 2.645723
+['UR', 'C', 'UR', 'DL', 'UR', 'UL']
+[relaxed] Cost = 1.943666
+[fixed] Cost = 1.943664
+['C', 'UR', 'DL', 'UR', 'UL', 'C']
+[relaxed] Cost = 2.584464
+[fixed] Cost = 2.588658
+['UR', 'DL', 'UR', 'UL', 'C', 'DL']
+[relaxed] Cost = 2.795730
+[fixed] Cost = 2.799920
+['DL', 'UR', 'UL', 'C', 'DL', 'DR']
+[relaxed] Cost = 2.924495
+[fixed] Cost = 2.927079
+['UR', 'UL', 'C', 'DL', 'DR', 'DL']
+[relaxed] Cost = 2.924495
+[fixed] Cost = 2.927078
+['UL', 'C', 'DL', 'DR', 'DL', 'DR']
+[relaxed] Cost = 2.004969
+[fixed] Cost = 2.004969
+['C', 'DL', 'DR', 'DL', 'DR', 'DL']
+[relaxed] Cost = 1.175873
+[fixed] Cost = 1.175873
+['DL', 'DR', 'DL', 'DR', 'DL', 'UR']
+[relaxed] Cost = 1.174100
+[fixed] Cost = 1.174099
+['DR', 'DL', 'DR', 'DL', 'UR', 'UL']
+[relaxed] Cost = 1.300857
+[fixed] Cost = 1.300857
+['DL', 'DR', 'DL', 'UR', 'UL', 'UR']
+[relaxed] Cost = 1.299363
+[fixed] Cost = 1.299363
+['DR', 'DL', 'UR', 'UL', 'UR', 'C']
+[relaxed] Cost = 2.023949
+[fixed] Cost = 2.023947
+['DL', 'UR', 'UL', 'UR', 'C', 'UR']
+[relaxed] Cost = 2.022575
+[fixed] Cost = 2.022575
+['UR', 'UL', 'UR', 'C', 'UR', 'UL']
+[relaxed] Cost = 1.951070
+[fixed] Cost = 1.951068
+['UL', 'UR', 'C', 'UR', 'UL', 'DR']
+[relaxed] Cost = 2.649812
+[fixed] Cost = 2.649810
+['UR', 'C', 'UR', 'UL', 'DR', 'UL']
+[relaxed] Cost = 1.947804
+[fixed] Cost = 1.947803
+['C', 'UR', 'UL', 'DR', 'UL', 'DR']
+[relaxed] Cost = 2.566207
+[fixed] Cost = 2.566205
+['UR', 'UL', 'DR', 'UL', 'DR', 'C']
+[relaxed] Cost = 2.568819
+[fixed] Cost = 2.568817
+['UL', 'DR', 'UL', 'DR', 'C', 'DR']
+[relaxed] Cost = 2.486266
+[fixed] Cost = 2.486266
+['DR', 'UL', 'DR', 'C', 'DR', 'UL']
+[relaxed] Cost = 2.421968
+[fixed] Cost = 2.421965
+['UL', 'DR', 'C', 'DR', 'UL', 'UR']
+[relaxed] Cost = 1.941967
+[fixed] Cost = 1.941967
+['DR', 'C', 'DR', 'UL', 'UR', 'C']
+[relaxed] Cost = 2.653248
+[fixed] Cost = 2.653247
+['C', 'DR', 'UL', 'UR', 'C', 'C']
+[relaxed] Cost = 1.876833
+[fixed] Cost = 1.876831
+['DR', 'UL', 'UR', 'C', 'C', 'DL']
+[relaxed] Cost = 2.790747
+[fixed] Cost = 2.790747
+['UL', 'UR', 'C', 'C', 'DL', 'C']
+[relaxed] Cost = 2.709097
+[fixed] Cost = 2.709095
+['UR', 'C', 'C', 'DL', 'C', 'UL']
+[relaxed] Cost = 2.007668
+[fixed] Cost = 2.007666
+['C', 'C', 'DL', 'C', 'UL', 'UR']
+[relaxed] Cost = 2.053506
+[fixed] Cost = 2.053505
+['C', 'DL', 'C', 'UL', 'UR', 'UL']
+[relaxed] Cost = 1.264160
+[fixed] Cost = 1.264160
+['DL', 'C', 'UL', 'UR', 'UL', 'DR']
+[relaxed] Cost = 2.078513
+[fixed] Cost = 2.078511
+['C', 'UL', 'UR', 'UL', 'DR', 'C']
+[relaxed] Cost = 2.081547
+[fixed] Cost = 2.081546
+['UL', 'UR', 'UL', 'DR', 'C', 'DR']
+[relaxed] Cost = 2.559424
+[fixed] Cost = 2.559424
+['UR', 'UL', 'DR', 'C', 'DR', 'DL']
+[relaxed] Cost = 2.694740
+[fixed] Cost = 2.694739
+['UL', 'DR', 'C', 'DR', 'DL', 'DR']
+[relaxed] Cost = 1.993911
+[fixed] Cost = 1.993911
+['DR', 'C', 'DR', 'DL', 'DR', 'DL']
+[relaxed] Cost = 1.772962
+[fixed] Cost = 1.772962
+['C', 'DR', 'DL', 'DR', 'DL', 'UR']
+[relaxed] Cost = 1.182499
+[fixed] Cost = 1.182498
+['DR', 'DL', 'DR', 'DL', 'UR', 'UL']
+[relaxed] Cost = 1.401638
+[fixed] Cost = 1.401636
+['DL', 'DR', 'DL', 'UR', 'UL', 'UR']
+[relaxed] Cost = 1.289991
+[fixed] Cost = 1.289990
+['DR', 'DL', 'UR', 'UL', 'UR', 'C']
+[relaxed] Cost = 2.019689
+[fixed] Cost = 2.019687
+['DL', 'UR', 'UL', 'UR', 'C', 'UR']
+[relaxed] Cost = 2.018733
+[fixed] Cost = 2.018733
+['UR', 'UL', 'UR', 'C', 'UR', 'C']
+[relaxed] Cost = 2.487777
+[fixed] Cost = 2.487776
+['UL', 'UR', 'C', 'UR', 'C', 'DR']
+[relaxed] Cost = 3.188833
+[fixed] Cost = 3.192822
+['UR', 'C', 'UR', 'C', 'DR', 'DL']
+[relaxed] Cost = 2.703466
+[fixed] Cost = 2.707454
+['C', 'UR', 'C', 'DR', 'DL', 'C']
+[relaxed] Cost = 2.597054
+[fixed] Cost = 2.599135
+['UR', 'C', 'DR', 'DL', 'C', 'UL']
+[relaxed] Cost = 2.116289
+[fixed] Cost = 2.119060
+['C', 'DR', 'DL', 'C', 'UL', 'UR']
+[relaxed] Cost = 1.635095
+[fixed] Cost = 1.635095
+['DR', 'DL', 'C', 'UL', 'UR', 'UL']
+[relaxed] Cost = 1.413537
+[fixed] Cost = 1.413537
+['DL', 'C', 'UL', 'UR', 'UL', 'UR']
+[relaxed] Cost = 1.301959
+[fixed] Cost = 1.301959
+['C', 'UL', 'UR', 'UL', 'UR', 'C']
+[relaxed] Cost = 1.900014
+[fixed] Cost = 1.900013
+['UL', 'UR', 'UL', 'UR', 'C', 'DR']
+[relaxed] Cost = 2.599540
+[fixed] Cost = 2.603084
+['UR', 'UL', 'UR', 'C', 'DR', 'UL']
+[relaxed] Cost = 2.644414
+[fixed] Cost = 2.647956
+['UL', 'UR', 'C', 'DR', 'UL', 'UR']
+[relaxed] Cost = 2.864724
+[fixed] Cost = 2.866602
+['UR', 'C', 'DR', 'UL', 'UR', 'UL']
+[relaxed] Cost = 2.162922
+[fixed] Cost = 2.165603
+['C', 'DR', 'UL', 'UR', 'UL', 'UR']
+[relaxed] Cost = 1.384295
+[fixed] Cost = 1.384295
+['DR', 'UL', 'UR', 'UL', 'UR', 'C']
+[relaxed] Cost = 1.869909
+[fixed] Cost = 1.869908
+['UL', 'UR', 'UL', 'UR', 'C', 'C']
+[relaxed] Cost = 1.792774
+[fixed] Cost = 1.792773
+['UR', 'UL', 'UR', 'C', 'C', 'UL']
+[relaxed] Cost = 1.729042
+[fixed] Cost = 1.729041
+['UL', 'UR', 'C', 'C', 'UL', 'UR']
+[relaxed] Cost = 1.885439
+[fixed] Cost = 1.885437
+['UR', 'C', 'C', 'UL', 'UR', 'C']
+[relaxed] Cost = 1.888833
+[fixed] Cost = 1.888832
+['C', 'C', 'UL', 'UR', 'C', 'DR']
+[relaxed] Cost = 2.728329
+[fixed] Cost = 2.732215
+['C', 'UL', 'UR', 'C', 'DR', 'DL']
+[relaxed] Cost = 2.864563
+[fixed] Cost = 2.868449
+['UL', 'UR', 'C', 'DR', 'DL', 'DR']
+[relaxed] Cost = 2.783970
+[fixed] Cost = 2.786002
+['UR', 'C', 'DR', 'DL', 'DR', 'DL']
+[relaxed] Cost = 2.002629
+[fixed] Cost = 2.005380
+['C', 'DR', 'DL', 'DR', 'DL', 'DR']
+[relaxed] Cost = 1.194144
+[fixed] Cost = 1.194143
+['DR', 'DL', 'DR', 'DL', 'DR', 'UL']
+[relaxed] Cost = 1.192674
+[fixed] Cost = 1.192673
+['DL', 'DR', 'DL', 'DR', 'UL', 'UR']
+[relaxed] Cost = 1.301091
+[fixed] Cost = 1.301090
+['DR', 'DL', 'DR', 'UL', 'UR', 'UL']
+[relaxed] Cost = 1.299581
+[fixed] Cost = 1.299580
+['DL', 'DR', 'UL', 'UR', 'UL', 'C']
+[relaxed] Cost = 2.019882
+[fixed] Cost = 2.024534
+['DR', 'UL', 'UR', 'UL', 'C', 'UL']
+[relaxed] Cost = 2.018428
+[fixed] Cost = 2.023080
+['UL', 'UR', 'UL', 'C', 'UL', 'DR']
+[relaxed] Cost = 2.708341
+[fixed] Cost = 2.711020
+['UR', 'UL', 'C', 'UL', 'DR', 'C']
+[relaxed] Cost = 2.491684
+[fixed] Cost = 2.494361
+['UL', 'C', 'UL', 'DR', 'C', 'UR']
+[relaxed] Cost = 2.012253
+[fixed] Cost = 2.012250
+['C', 'UL', 'DR', 'C', 'UR', 'C']
+[relaxed] Cost = 2.614197
+[fixed] Cost = 2.614195
+['UL', 'DR', 'C', 'UR', 'C', 'UR']
+[relaxed] Cost = 1.905473
+[fixed] Cost = 1.905472
+['DR', 'C', 'UR', 'C', 'UR', 'UL']
+[relaxed] Cost = 1.947037
+[fixed] Cost = 1.947036
+['C', 'UR', 'C', 'UR', 'UL', 'C']
+[relaxed] Cost = 2.585057
+[fixed] Cost = 2.588708
+['UR', 'C', 'UR', 'UL', 'C', 'DL']
+[relaxed] Cost = 2.583473
+[fixed] Cost = 2.587060
+['C', 'UR', 'UL', 'C', 'DL', 'UR']
+[relaxed] Cost = 2.734364
+[fixed] Cost = 2.736255
+['UR', 'UL', 'C', 'DL', 'UR', 'C']
+[relaxed] Cost = 3.454124
+[fixed] Cost = 3.455965
+['UL', 'C', 'DL', 'UR', 'C', 'DR']
+[relaxed] Cost = 3.590762
+[fixed] Cost = 3.593336

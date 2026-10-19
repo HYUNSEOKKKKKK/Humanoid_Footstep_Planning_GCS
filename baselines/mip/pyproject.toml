@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "micqp-planner"
+version = "0.1.0"
+description = "MIQCQP footstep planner reproduction (Deits & Tedrake 2014)"
+requires-python = ">=3.9"
+dependencies = ["numpy", "matplotlib", "mosek"]
+
+[project.optional-dependencies]
+gurobi = ["gurobipy"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

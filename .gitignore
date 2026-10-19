@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.idea/
+.claude/
+.agents/
+.pytest_cache/
+.local/
+outputs/
+logs/
+results/
+*.egg-info/
+build/
+dist/
+*.so
+*.opf
+mosek.lic
+.env

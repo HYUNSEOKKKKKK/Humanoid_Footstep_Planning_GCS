@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-07-18T20:00:17.464693+09:00",
+  "script": "/home/hyunseok/footstep_planner/main_VAE_optapi_Com1_2.py",
+  "command": [
+    "/home/hyunseok/footstep_planner/main_VAE_optapi_Com1_2.py"
+  ],
+  "horizon_definition": "number of intermediate single-foot SL/SR layers; excludes initial/final D",
+  "delta_relax_definition": "(C_fixed - C_relax) / abs(C_fixed)",
+  "gap_rel_relaxed_definition": "(C_fixed - C_relax) / abs(C_relax)",
+  "timing_unit": "milliseconds",
+  "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "numpy_version": "2.2.6",
+  "arguments": {
+    "terrain_dir": "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5",
+    "terrain_key": "terrain",
+    "difficulty": 0.5,
+    "expected_regions": 4,
+    "horizons": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "max_terrains": 10,
+    "edge_policy": "adjacent",
+    "step_span": 0.7,
+    "alpha_deg": 30.0,
+    "stance_width": 0.25,
+    "M_large": 1000.0,
+    "M_small": 1e-06,
+    "trials": 5,
+    "temp": 1.0,
+    "seed": 123,
+    "greedy_first": true,
+    "structured_candidates": true,
+    "early_stop": false,
+    "fixed_budget_sec": 0.0,
+    "mosek_threads": 1,
+    "solver_log": 0,
+    "warmup": true,
+    "shuffle_horizons": true,
+    "output": null,
+    "overwrite": false
+  },
+  "terrain_files": [
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_000.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_001.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_002.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_003.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_004.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_005.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_006.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_007.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_008.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_009.json"
+  ]
+}

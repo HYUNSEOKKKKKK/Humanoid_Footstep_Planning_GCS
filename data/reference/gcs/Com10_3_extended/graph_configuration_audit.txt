@@ -1,0 +1,85 @@
+Extended graph-configuration audit
+==================================
+
+Dataset and fixed planner settings
+----------------------------------
+- CVAE terrain directory: /home/hyunseok/CVAE_steppingstone/vae_terrains/0.0
+- alpha=0.0; 100 JSON terrains; exactly four physical regions.
+- region 0 is the physical start and region 3 the physical goal; neither is extra.
+- terrain_seed=123+terrain_id, matching the existing CVAE generator convention.
+- step_span=0.7, yaw_bound=30.0 deg, stance_width=0.25.
+- M_large=1000.0, M_small=1e-06; existing objective and SDP/RLT model unchanged.
+- greedy first, probabilistic fallback, first feasible early stop, candidate budget=100.
+- cooperative deadline=5.0 sec; MOSEK calls already running are not interrupted.
+- SeedSequence([123, terrain_id, probabilistic_index]) is shared by configurations.
+
+Verified repository duplicate and mode rule
+------------------------------------------
+- TerrainGCS copies the same convex region; it does not split region geometry.
+- Start group: first copy D, then the repository's SL/SR alternation.
+- Middle groups: repository SL/SR alternation.
+- Goal group: preceding copies alternate and the last copy is target D.
+
+Actual graph configurations on terrain 0
+----------------------------------------
+- dup_reduced_1: copy_counts=[4, 3, 3, 4], |V|=14, |E|=22, SL=8, SR=4, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=70.0
+- dup_reduced_2: copy_counts=[3, 2, 2, 3], |V|=10, |E|=14, SL=4, SR=4, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=13.0
+- dup_reduced_3: copy_counts=[2, 1, 1, 2], |V|=6, |E|=3, SL=4, SR=0, D=2, DAG=True, forward=True, source_to_target=False, paths(capped at 1000000000)=0.0
+- nominal: copy_counts=[5, 4, 4, 5], |V|=18, |E|=30, SL=8, SR=8, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=317.0
+- dup_doubled: copy_counts=[10, 8, 8, 10], |V|=36, |E|=66, SL=18, SR=16, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=8164.0
+- dup_tripled: copy_counts=[15, 12, 12, 15], |V|=54, |E|=102, SL=26, SR=26, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=48445.0
+- dup_quadrupled: copy_counts=[20, 16, 16, 20], |V|=72, |E|=138, SL=36, SR=34, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=164622.0
+- edge_dense_mode_compatible: copy_counts=[5, 4, 4, 5], |V|=18, |E|=72, SL=8, SR=8, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=3050.0
+- edge_fully_connected_forward: copy_counts=[5, 4, 4, 5], |V|=18, |E|=152, SL=8, SR=8, D=2, DAG=True, forward=True, source_to_target=True, paths(capped at 1000000000)=65535.0
+
+Edge definitions
+----------------
+- nominal uses TerrainGCS.create_edges_general exactly (sparse, parity/topology based DAG).
+- No geometric-distance pruning occurs in create_edges_general; step_span is an optimization SOC constraint.
+- edge_dense_mode_compatible is the existing Com10_3.py edge_dense definition: all u<v SL<->SR pairs,
+  source D only to start-region single-support copies, goal-region single-support copies only to target D.
+  Actual dense edge count=72; exact edges=[[1, 2], [1, 3], [1, 4], [1, 5], [2, 3], [2, 5], [2, 7], [2, 9], [2, 11], [2, 13], [2, 15], [2, 17], [3, 4], [3, 6], [3, 8], [3, 10], [3, 12], [3, 14], [3, 16], [4, 5], [4, 7], [4, 9], [4, 11], [4, 13], [4, 15], [4, 17], [5, 6], [5, 8], [5, 10], [5, 12], [5, 14], [5, 16], [6, 7], [6, 9], [6, 11], [6, 13], [6, 15], [6, 17], [7, 8], [7, 10], [7, 12], [7, 14], [7, 16], [8, 9], [8, 11], [8, 13], [8, 15], [8, 17], [9, 10], [9, 12], [9, 14], [9, 16], [10, 11], [10, 13], [10, 15], [10, 17], [11, 12], [11, 14], [11, 16], [12, 13], [12, 15], [12, 17], [13, 14], [13, 16], [14, 15], [14, 17], [14, 18], [15, 16], [15, 18], [16, 17], [16, 18], [17, 18]]
+- edge_fully_connected_forward adds every u<v pair except direct source->target.
+  Calculation: C(18,2)-1=152; actual=152; exact edges=[[1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [1, 8], [1, 9], [1, 10], [1, 11], [1, 12], [1, 13], [1, 14], [1, 15], [1, 16], [1, 17], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [2, 8], [2, 9], [2, 10], [2, 11], [2, 12], [2, 13], [2, 14], [2, 15], [2, 16], [2, 17], [2, 18], [3, 4], [3, 5], [3, 6], [3, 7], [3, 8], [3, 9], [3, 10], [3, 11], [3, 12], [3, 13], [3, 14], [3, 15], [3, 16], [3, 17], [3, 18], [4, 5], [4, 6], [4, 7], [4, 8], [4, 9], [4, 10], [4, 11], [4, 12], [4, 13], [4, 14], [4, 15], [4, 16], [4, 17], [4, 18], [5, 6], [5, 7], [5, 8], [5, 9], [5, 10], [5, 11], [5, 12], [5, 13], [5, 14], [5, 15], [5, 16], [5, 17], [5, 18], [6, 7], [6, 8], [6, 9], [6, 10], [6, 11], [6, 12], [6, 13], [6, 14], [6, 15], [6, 16], [6, 17], [6, 18], [7, 8], [7, 9], [7, 10], [7, 11], [7, 12], [7, 13], [7, 14], [7, 15], [7, 16], [7, 17], [7, 18], [8, 9], [8, 10], [8, 11], [8, 12], [8, 13], [8, 14], [8, 15], [8, 16], [8, 17], [8, 18], [9, 10], [9, 11], [9, 12], [9, 13], [9, 14], [9, 15], [9, 16], [9, 17], [9, 18], [10, 11], [10, 12], [10, 13], [10, 14], [10, 15], [10, 16], [10, 17], [10, 18], [11, 12], [11, 13], [11, 14], [11, 15], [11, 16], [11, 17], [11, 18], [12, 13], [12, 14], [12, 15], [12, 16], [12, 17], [12, 18], [13, 14], [13, 15], [13, 16], [13, 17], [13, 18], [14, 15], [14, 16], [14, 17], [14, 18], [15, 16], [15, 17], [15, 18], [16, 17], [16, 18], [17, 18]]
+- Fully-forward intentionally permits SL->SL and SR->SR graph candidates. Existing optimization constraints
+  are not removed or relaxed. The repository's edge-membership branch has explicit cases only for
+  D->SL/SR, SL<->SR, and SL/SR->D; this limitation is preserved rather than patched here.
+- Every graph is checked with Kahn topological sort, all edges u<v, source indegree=0, target outdegree=0,
+  and source-to-target reachability before any solver call.
+- Nominal exact edges=[[1, 2], [1, 3], [2, 3], [3, 4], [4, 5], [2, 7], [3, 6], [4, 7], [5, 6], [6, 7], [7, 8], [8, 9], [6, 11], [7, 10], [8, 11], [9, 10], [10, 11], [11, 12], [12, 13], [10, 15], [11, 14], [12, 15], [13, 14], [14, 15], [15, 16], [16, 17], [14, 18], [15, 18], [16, 18], [17, 18]]
+
+Fixed nominal vertex ordering
+-----------------------------
+  1: region=0, mode=D
+  2: region=0, mode=SL
+  3: region=0, mode=SR
+  4: region=0, mode=SL
+  5: region=0, mode=SR
+  6: region=1, mode=SL
+  7: region=1, mode=SR
+  8: region=1, mode=SL
+  9: region=1, mode=SR
+  10: region=2, mode=SL
+  11: region=2, mode=SR
+  12: region=2, mode=SL
+  13: region=2, mode=SR
+  14: region=3, mode=SL
+  15: region=3, mode=SR
+  16: region=3, mode=SL
+  17: region=3, mode=SR
+  18: region=3, mode=D
+
+Timing definitions
+------------------
+- time_to_first_feasible_ms ends immediately after the first acceptable fixed solve and successful existing postprocess.
+- total_elapsed_time_ms records actual termination; capped simple-path counting is excluded from planner timing.
+- The five-second deadline is cooperative: it is checked between stages/candidates, not inside MOSEK optimize calls.
+
+Existing-result reuse audit
+---------------------------
+- --reuse-existing was not requested; zero legacy rows reused.
+
+Nominal equivalence validation
+------------------------------
+Nominal equivalence validation: PASS for terrain 0 using the identical selected path.
+success=True, |V|=18, |E|=30, C_relax=20.499552145643328, C_round=25.430124583717287, delta_relax=0.24052098324117926, footsteps=10.

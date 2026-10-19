@@ -1,0 +1,4 @@
+planner,alpha,t_max_sec,run_json,ok,stop_reason,time_sec,status,objective,runtime_s,N,goal_tol_m
+Optimization-based,,10.0,run_000.json,0,failed,10.678450754843652,failed,nan,10.678450754843652,18,0.5
+Optimization-based,,10.0,run_001.json,0,failed,10.69245265237987,failed,nan,10.69245265237987,18,0.5
+Optimization-based,,10.0,run_002.json,0,failed,0.6980195799842477,failed,nan,0.6980195799842477,18,0.5

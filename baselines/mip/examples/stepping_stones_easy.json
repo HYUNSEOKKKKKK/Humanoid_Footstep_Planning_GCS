@@ -1,0 +1,16 @@
+{
+  "terrain": {
+    "stones": [
+      {"name": "stone_1", "center": [0.0, 0.0, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_2", "center": [0.35, 0.05, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_3", "center": [0.70, -0.05, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_4", "center": [1.05, 0.05, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_5", "center": [1.40, -0.05, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_6", "center": [1.75, 0.05, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0},
+      {"name": "stone_7", "center": [2.10, 0.0, 0.0], "width": 0.45, "height": 0.35, "yaw_deg": 0.0}
+    ]
+  },
+  "start_left":  [0.0,  0.12, 0.0, 0.0],
+  "start_right": [0.0, -0.12, 0.0, 0.0],
+  "goal":        [2.10, 0.0,  0.0, 0.0]
+}

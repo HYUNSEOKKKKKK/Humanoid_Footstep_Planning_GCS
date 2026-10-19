@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Humanoid Footstep Planning using Graphs of Convex Sets"
+type: software
+authors:
+  - family-names: Kim
+    given-names: Hyunseok
+  - family-names: Mesesan
+    given-names: George
+  - family-names: Schuller
+    given-names: Robert
+  - family-names: Lee
+    given-names: Jinoh
+  - family-names: Park
+    given-names: Hae-Won
+repository-code: "https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS"
+preferred-citation:
+  type: article
+  title: "Humanoid Footstep Planning using Graphs of Convex Sets"
+  authors:
+    - family-names: Kim
+      given-names: Hyunseok
+    - family-names: Mesesan
+      given-names: George
+    - family-names: Schuller
+      given-names: Robert
+    - family-names: Lee
+      given-names: Jinoh
+    - family-names: Park
+      given-names: Hae-Won
+  journal: "IEEE Robotics and Automation Letters"
+  year: 2026
+  notes: "Accepted for publication; submission 26-2531. DOI and pagination pending."

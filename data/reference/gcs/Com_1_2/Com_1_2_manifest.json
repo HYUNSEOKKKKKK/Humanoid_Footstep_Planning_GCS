@@ -1,0 +1,137 @@
+{
+  "created_at": "2026-07-24T10:14:50.022189+09:00",
+  "script": "/home/hyunseok/footstep_planner/Com_1_2.py",
+  "command": [
+    "Com_1_2.py",
+    "--output-dir",
+    "results/Com_1_2",
+    "--overwrite"
+  ],
+  "methodology_version": "Com_1_2_partition_union_v2",
+  "active_sweeps": [
+    "horizon",
+    "region"
+  ],
+  "experiment_config_hash": "379ee8146781d789e441e35b4311cabed50dcb74ef1f11299f2759c10a2ccbb6",
+  "horizon_definition": "maximum number of intermediate single-foot SL/SR stages; goal may terminate at any stage; initial/final D excluded",
+  "delta_relax_definition": "(C_round - C_relax) / abs(C_relax)",
+  "timing_unit": "seconds",
+  "timing_boundaries": {
+    "graph_construction_time_sec": "time-expanded vertices and edges only",
+    "model_formulation_time_sec": "pose/centroid preparation, OptAPI task construction, terminal audit, and relaxed parameter packing/setting",
+    "relaxed_solve_time_sec": "MOSEK relaxed optimize plus solution extraction",
+    "path_recovery_fixed_solve_time_sec": "all path selections and fixed-path parameter/solve/extraction attempts",
+    "total_time_sec": "sum of graph, model formulation, relaxed solve, and recovery/fixed phases; terrain derivation, warmup, CSV, and summary aggregation excluded"
+  },
+  "success_definitions": {
+    "relaxed_success": "accepted finite MOSEK relaxed solution",
+    "recovery_feasible": "at least one accepted finite fixed-path solve"
+  },
+  "timeout_policy": {
+    "optimizer_time_limit_sec": 300.0,
+    "recovery_loop_budget_sec": 30.0,
+    "recovery_budget_check": "between trials only; an in-progress optimizer call is governed by optimizer_time_limit_sec"
+  },
+  "paired_seed_definition": "terrain_seed = cvae_base_seed + run_XXX index",
+  "region_control": {
+    "method": "local-width partition of both original intermediate yawed rectangles into disjoint strips",
+    "preserved": [
+      "physical support-region union",
+      "total support area",
+      "terrain outer envelope",
+      "start and goal rectangles",
+      "start and goal headings",
+      "endpoint XY/3D distance",
+      "centre-line XY/3D length",
+      "centre-coordinate bounding box"
+    ],
+    "graph_semantics": "complete child-strip lift of the base parent adjacency: any strip in the same or next original physical-region group"
+  },
+  "summary": {
+    "std_ddof": 1,
+    "quantiles": "NumPy linear default",
+    "missing_values": "excluded per metric; each metric has its own n",
+    "failure_rows": "retained"
+  },
+  "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "numpy_version": "2.2.6",
+  "arguments": {
+    "terrain_dir": "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5",
+    "terrain_key": "terrain",
+    "difficulty": 0.5,
+    "cvae_base_seed": 123,
+    "terrain_start_index": 0,
+    "num_terrains": 20,
+    "horizons": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "regions": [
+      4,
+      8,
+      12,
+      16,
+      20
+    ],
+    "region_horizon": 12,
+    "sweeps": "both",
+    "step_span": 0.7,
+    "alpha_deg": 30.0,
+    "stance_width": 0.25,
+    "M_large": 1000.0,
+    "M_small": 1e-06,
+    "trials": 100,
+    "temperature": 1.0,
+    "recovery_seed": 123,
+    "greedy_first": true,
+    "early_stop": true,
+    "fixed_budget_sec": 30.0,
+    "mosek_threads": 1,
+    "solver_log": 0,
+    "solver_time_limit_sec": 300.0,
+    "warmup": true,
+    "shuffle_conditions": true,
+    "output_dir": "results/Com_1_2",
+    "overwrite": true,
+    "resume": false,
+    "smoke_test": false,
+    "validate_only": false
+  },
+  "terrain_files": [
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_000.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_001.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_002.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_003.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_004.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_005.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_006.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_007.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_008.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_009.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_010.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_011.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_012.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_013.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_014.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_015.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_016.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_017.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_018.json",
+    "/home/hyunseok/CVAE_steppingstone/vae_terrains/0.5/run_019.json"
+  ],
+  "outputs": {
+    "horizon": {
+      "raw": "/home/hyunseok/footstep_planner/results/Com_1_2/Com_1_2_horizon_sweep_raw.csv",
+      "summary": "/home/hyunseok/footstep_planner/results/Com_1_2/Com_1_2_horizon_sweep_summary.csv"
+    },
+    "region": {
+      "raw": "/home/hyunseok/footstep_planner/results/Com_1_2/Com_1_2_region_sweep_raw.csv",
+      "summary": "/home/hyunseok/footstep_planner/results/Com_1_2/Com_1_2_region_sweep_summary.csv"
+    }
+  }
+}

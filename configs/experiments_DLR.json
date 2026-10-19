@@ -1,0 +1,57 @@
+{
+  "test_00": {
+    "start": { "center": [0.5, 2.5, 0.0], "heading_deg": 30.0 },
+    "goal":  { "center": [1.5, 3.25, 0.0], "heading_deg": 90.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 60.0, "goal_R": 60.0 }
+  },
+  "test_01": {
+    "start": { "center": [1.5, 3.25, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [1.5, 4.0, 0.0], "heading_deg": 145.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 55.0, "goal_R": 55.0 }
+  },
+  "test_02": {
+    "start": { "center": [1.5, 4.0, 0.0], "heading_deg":145.0 },
+    "goal":  { "center": [0.5, 4.5, 0.0], "heading_deg": 210.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 55.0, "goal_R": 55.0 }
+  },
+  "test_03": {
+    "start": { "center": [0.5, 4.5, 0.0], "heading_deg": 210.0 },
+    "goal":  { "center": [0.5, 2.8, 0.0], "heading_deg": 270.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 60.0, "goal_R": 60.0 }
+  },
+  "test_04": {
+    "start": { "center": [0.5, 2.8, 0.0], "heading_deg": 270.0 },
+    "goal":  { "center": [0.5, 1.0, 0.0], "heading_deg": -45.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 45.0, "goal_R": 45.0 }
+  },
+  "test_05": {
+    "start": { "center": [0.5, 1.0, 0.0], "heading_deg": -45.0 },
+    "goal":  { "center": [2.2, 1.0, 0.0], "heading_deg": 45.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 90.0, "goal_R": 90.0 }
+  },
+  "test_06": {
+    "start": { "center": [2.2, 1.0, 0.0], "heading_deg": 45.0 },
+    "goal":  { "center": [2.2, 2.8, 0.0], "heading_deg": 45.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 0.0, "goal_R": 0.0 }
+  },
+  "test_07": {
+    "start": { "center": [2.2, 2.8, 0.0], "heading_deg": 45.0 },
+    "goal":  { "center": [3.4, 2.8, 0.0], "heading_deg": -45.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": -90.0, "goal_R": -90.0 }
+  },
+  "test_08": {
+    "start": { "center": [3.4, 2.8, 0.0], "heading_deg": -45.0 },
+    "goal":  { "center": [3.4, 2.2, 0.0], "heading_deg": -135.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": -90.0, "goal_R": -90.0 }
+  },
+  "test_09": {
+    "start": { "center": [3.4, 2.2, 0.0], "heading_deg": -135.0 },
+    "goal":  { "center": [2.8, 1.6, 0.0], "heading_deg": -90.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 45.0, "goal_R": 45.0 }
+  },
+  "test_10": {
+    "start": { "center": [2.8, 1.6, 0.0], "heading_deg": -90.0 },
+    "goal":  { "center": [3.4, 1.0, 0.0], "heading_deg": -45.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 45.0, "goal_R": 45.0 }
+  }
+}

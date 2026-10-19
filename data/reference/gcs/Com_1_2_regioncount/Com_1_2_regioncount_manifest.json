@@ -1,0 +1,15 @@
+{
+  "run_timestamp": "2026-07-27T15:11:15",
+  "experiment_config_hash": "0031c10ee10f42fe40780d752c83b7b74553037515e8fbbaa791f882d32ead6a",
+  "region_counts": [
+    3,
+    4,
+    5
+  ],
+  "num_terrains": 100,
+  "n_rows_written": 300,
+  "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+  "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.35",
+  "terrain_root": "/home/hyunseok/CVAE_steppingstone/vae_terrains_regioncount",
+  "output_dir": "/home/hyunseok/footstep_planner/results/Com_1_2_regioncount"
+}

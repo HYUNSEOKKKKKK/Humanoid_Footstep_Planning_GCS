@@ -1,0 +1,32 @@
+{
+  "footstep_planner": {
+    "head": "471e2eb4087c855239ead3af9b65637a0488de96\n",
+    "branch": "master\n",
+    "status": "",
+    "remotes": "origin\tgit@github.com:HYUNSEOKKKKKK/footstep_planner.git (fetch)\norigin\tgit@github.com:HYUNSEOKKKKKK/footstep_planner.git (push)\n"
+  },
+  "CVAE_steppingstone": {
+    "head": "06eee7dd3dc9c18e2341ae528f995ebddc54607e\n",
+    "branch": "master\n",
+    "status": " M vae_terrain.json\n D vae_terrains/run_000.json\n D vae_terrains/run_001.json\n D vae_terrains/run_002.json\n?? vae_run_plot.png\n?? vae_terrains/0.0/\n?? vae_terrains/0.5/\n?? vae_terrains/1.0/\n?? vae_terrains/run_015.json\n",
+    "remotes": "origin\tgit@github.com:HYUNSEOKKKKKK/CVAE_steppingstone.git (fetch)\norigin\tgit@github.com:HYUNSEOKKKKKK/CVAE_steppingstone.git (push)\n"
+  },
+  "footstep_astar": {
+    "head": "1ddb496416236c4a9c2c8cdfc57cb3907aede082\n",
+    "branch": "main\n",
+    "status": " M .gitignore\n",
+    "remotes": "origin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_astar.git (fetch)\norigin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_astar.git (push)\n"
+  },
+  "footstep_mip": {
+    "head": "ed9ec2f19ab46c71d307f7cdcf9785b4606fa4dc\n",
+    "branch": "main\n",
+    "status": "",
+    "remotes": "origin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_mip.git (fetch)\norigin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_mip.git (push)\n"
+  },
+  "mujoco_walk": {
+    "head": "859f643e46c0586b10e4ee4a258a68658f03ea1e\n",
+    "branch": "master\n",
+    "status": "",
+    "remotes": "origin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_visualize.git (fetch)\norigin\tgit@github.com:HYUNSEOKKKKKK/footstep_planning_visualize.git (push)\n"
+  }
+}

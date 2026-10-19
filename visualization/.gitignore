@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Large video files
+*.mp4
+*.avi
+*.mov
+
+# Claude Code internal
+.claude/

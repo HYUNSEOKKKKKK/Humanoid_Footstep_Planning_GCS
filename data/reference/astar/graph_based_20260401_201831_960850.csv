@@ -1,0 +1,3 @@
+planner,alpha,t_max_sec,run_json,ok,stop_reason,time_sec,expanded_iters,graph_nodes,child_total_gen,child_total_valid,child_total_invalid,child_reject_pct
+Graph-based,0.0,10.0,run_000.json,1,reached,0.43633566703647375,71,1967,7668,2525,5143,67.07094418362024
+Graph-based,0.0,10.0,run_001.json,0,timeout,10.00616697408259,1504,8137,162224,68443,93781,57.809571949896444

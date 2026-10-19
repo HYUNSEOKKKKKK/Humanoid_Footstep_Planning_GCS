@@ -1,0 +1,103 @@
+{
+  "terrain": {
+    "stones": [
+      {
+        "name": "stone_1",
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 0.0
+      },
+      {
+        "name": "stone_2",
+        "center": [
+          0.4,
+          0.15,
+          0.02
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 15.0
+      },
+      {
+        "name": "stone_3",
+        "center": [
+          0.8,
+          -0.15,
+          0.03
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 0.0
+      },
+      {
+        "name": "stone_4",
+        "center": [
+          1.2,
+          0.1,
+          0.01
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 15.0
+      },
+      {
+        "name": "stone_5",
+        "center": [
+          1.6,
+          -0.1,
+          0.0
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 0.0
+      },
+      {
+        "name": "stone_6",
+        "center": [
+          2.0,
+          0.0,
+          0.02
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 15.0
+      },
+      {
+        "name": "stone_7",
+        "center": [
+          2.4,
+          0.0,
+          0.0
+        ],
+        "width": 0.45,
+        "height": 0.35,
+        "yaw_deg": 0.0
+      }
+    ]
+  },
+  "start": {
+    "left": {
+      "x": 0.0,
+      "y": 0.12,
+      "z": 0.0,
+      "yaw_deg": 0.0
+    },
+    "right": {
+      "x": 0.0,
+      "y": -0.12,
+      "z": 0.0,
+      "yaw_deg": 0.0
+    }
+  },
+  "goal": {
+    "x": 2.4,
+    "y": 0.0,
+    "z": 0.0,
+    "yaw_deg": 0.0
+  }
+}

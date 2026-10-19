@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+# Reference hashes describe exact original bytes, including CSV line endings.
+/data/** -text
+/paper/** -text
+/terrain_generation/checkpoints/** -text
+
+*.png binary
+*.pdf binary
+*.mp4 binary
+*.pt binary
+*.stl binary

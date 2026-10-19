@@ -1,0 +1,11 @@
+name: footstep_mip
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - matplotlib
+  - pip:
+      - -r requirements.txt
+      - mosek

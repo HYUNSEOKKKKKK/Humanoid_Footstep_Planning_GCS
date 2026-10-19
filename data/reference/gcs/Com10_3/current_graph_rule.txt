@@ -1,0 +1,178 @@
+Current CVAE graph-construction rule audit
+==========================================
+
+Dataset
+-------
+- Existing CVAE JSON files are reused from: /home/hyunseok/CVAE_steppingstone/vae_terrains/0.0
+- difficulty alpha = 0.0; exactly four physical regions per JSON.
+- terrain_seed is recorded as base_seed + terrain_id, matching the CVAE generator's
+  seed_all(SEED + i) convention. The JSON itself does not embed a seed field.
+- Region 0 is the physical start region and region 3 is the physical goal region;
+  start/goal are not separate additional terrain regions.
+
+Default duplicate rule
+----------------------
+- Four-region paper/evaluation default used here: [5, 4, 4, 5]. It is the
+  valid four-region setting in main_VAE_fusionapi.py and Com_1_5.py.
+- The current main_VAE_optapi.py CLI literal is [5, 2, 2, 2, 2, 5], which is
+  a six-region vector and raises a length mismatch on these four-region JSONs;
+  it is therefore not treated as a valid default for this dataset.
+- JSON copy_counts takes precedence if present. These 100 JSON files do not embed it.
+- TerrainGCS.get_vertices_with_modes creates identical convex-region copies; it does
+  not geometrically split a region.
+- In the start group, copy 1 is D, then SL/SR alternate. In the goal group, the last
+  copy is D; preceding copies alternate SL/SR. Middle groups alternate SL/SR.
+
+Per-terrain actual default duplicate counts
+-------------------------------------------
+  terrain_id=0: [5, 4, 4, 5]
+  terrain_id=1: [5, 4, 4, 5]
+  terrain_id=2: [5, 4, 4, 5]
+  terrain_id=3: [5, 4, 4, 5]
+  terrain_id=4: [5, 4, 4, 5]
+  terrain_id=5: [5, 4, 4, 5]
+  terrain_id=6: [5, 4, 4, 5]
+  terrain_id=7: [5, 4, 4, 5]
+  terrain_id=8: [5, 4, 4, 5]
+  terrain_id=9: [5, 4, 4, 5]
+  terrain_id=10: [5, 4, 4, 5]
+  terrain_id=11: [5, 4, 4, 5]
+  terrain_id=12: [5, 4, 4, 5]
+  terrain_id=13: [5, 4, 4, 5]
+  terrain_id=14: [5, 4, 4, 5]
+  terrain_id=15: [5, 4, 4, 5]
+  terrain_id=16: [5, 4, 4, 5]
+  terrain_id=17: [5, 4, 4, 5]
+  terrain_id=18: [5, 4, 4, 5]
+  terrain_id=19: [5, 4, 4, 5]
+  terrain_id=20: [5, 4, 4, 5]
+  terrain_id=21: [5, 4, 4, 5]
+  terrain_id=22: [5, 4, 4, 5]
+  terrain_id=23: [5, 4, 4, 5]
+  terrain_id=24: [5, 4, 4, 5]
+  terrain_id=25: [5, 4, 4, 5]
+  terrain_id=26: [5, 4, 4, 5]
+  terrain_id=27: [5, 4, 4, 5]
+  terrain_id=28: [5, 4, 4, 5]
+  terrain_id=29: [5, 4, 4, 5]
+  terrain_id=30: [5, 4, 4, 5]
+  terrain_id=31: [5, 4, 4, 5]
+  terrain_id=32: [5, 4, 4, 5]
+  terrain_id=33: [5, 4, 4, 5]
+  terrain_id=34: [5, 4, 4, 5]
+  terrain_id=35: [5, 4, 4, 5]
+  terrain_id=36: [5, 4, 4, 5]
+  terrain_id=37: [5, 4, 4, 5]
+  terrain_id=38: [5, 4, 4, 5]
+  terrain_id=39: [5, 4, 4, 5]
+  terrain_id=40: [5, 4, 4, 5]
+  terrain_id=41: [5, 4, 4, 5]
+  terrain_id=42: [5, 4, 4, 5]
+  terrain_id=43: [5, 4, 4, 5]
+  terrain_id=44: [5, 4, 4, 5]
+  terrain_id=45: [5, 4, 4, 5]
+  terrain_id=46: [5, 4, 4, 5]
+  terrain_id=47: [5, 4, 4, 5]
+  terrain_id=48: [5, 4, 4, 5]
+  terrain_id=49: [5, 4, 4, 5]
+  terrain_id=50: [5, 4, 4, 5]
+  terrain_id=51: [5, 4, 4, 5]
+  terrain_id=52: [5, 4, 4, 5]
+  terrain_id=53: [5, 4, 4, 5]
+  terrain_id=54: [5, 4, 4, 5]
+  terrain_id=55: [5, 4, 4, 5]
+  terrain_id=56: [5, 4, 4, 5]
+  terrain_id=57: [5, 4, 4, 5]
+  terrain_id=58: [5, 4, 4, 5]
+  terrain_id=59: [5, 4, 4, 5]
+  terrain_id=60: [5, 4, 4, 5]
+  terrain_id=61: [5, 4, 4, 5]
+  terrain_id=62: [5, 4, 4, 5]
+  terrain_id=63: [5, 4, 4, 5]
+  terrain_id=64: [5, 4, 4, 5]
+  terrain_id=65: [5, 4, 4, 5]
+  terrain_id=66: [5, 4, 4, 5]
+  terrain_id=67: [5, 4, 4, 5]
+  terrain_id=68: [5, 4, 4, 5]
+  terrain_id=69: [5, 4, 4, 5]
+  terrain_id=70: [5, 4, 4, 5]
+  terrain_id=71: [5, 4, 4, 5]
+  terrain_id=72: [5, 4, 4, 5]
+  terrain_id=73: [5, 4, 4, 5]
+  terrain_id=74: [5, 4, 4, 5]
+  terrain_id=75: [5, 4, 4, 5]
+  terrain_id=76: [5, 4, 4, 5]
+  terrain_id=77: [5, 4, 4, 5]
+  terrain_id=78: [5, 4, 4, 5]
+  terrain_id=79: [5, 4, 4, 5]
+  terrain_id=80: [5, 4, 4, 5]
+  terrain_id=81: [5, 4, 4, 5]
+  terrain_id=82: [5, 4, 4, 5]
+  terrain_id=83: [5, 4, 4, 5]
+  terrain_id=84: [5, 4, 4, 5]
+  terrain_id=85: [5, 4, 4, 5]
+  terrain_id=86: [5, 4, 4, 5]
+  terrain_id=87: [5, 4, 4, 5]
+  terrain_id=88: [5, 4, 4, 5]
+  terrain_id=89: [5, 4, 4, 5]
+  terrain_id=90: [5, 4, 4, 5]
+  terrain_id=91: [5, 4, 4, 5]
+  terrain_id=92: [5, 4, 4, 5]
+  terrain_id=93: [5, 4, 4, 5]
+  terrain_id=94: [5, 4, 4, 5]
+  terrain_id=95: [5, 4, 4, 5]
+  terrain_id=96: [5, 4, 4, 5]
+  terrain_id=97: [5, 4, 4, 5]
+  terrain_id=98: [5, 4, 4, 5]
+  terrain_id=99: [5, 4, 4, 5]
+
+Default edge rule
+-----------------
+- main_VAE_optapi.py calls build_graph(..., edge_rule='general').
+- TerrainGCS.create_edges_general connects a directed acyclic sparse topology:
+  source D to the first SL/SR copies, alternating SL<->SR chains within groups,
+  parity-compatible transitions to the next physical region, then goal-group
+  single-support copies to the final D sink.
+- Mode compatibility is implicit in duplicate parity/order, not a separate geometric test.
+
+Geometric pruning and physical reachability
+-------------------------------------------
+- The current default graph builder performs NO geometric-distance pruning.
+- step_span=0.7 is enforced inside build_gcs_model_VAE_optapi
+  as the physical SOC step-reachability constraint; it is not used by create_edges_general.
+- edge_strict is therefore a new graph-preprocessing sensitivity variant: it filters
+  only the existing default edge set using minimum planar polygon distance <=
+  0.8 * step_span = 0.56. The optimization constraint
+  remains step_span=0.7.
+- edge_dense removes graph-level geometric screening and includes every forward
+  SL<->SR-compatible pair. Source D only connects within the physical start group,
+  and only physical-goal-group single-support vertices connect to sink D.
+- number_of_mode_compatible_candidate_edges counts this full support-compatible
+  forward-pair universe for every configuration. The difference between that count
+  and default edges is topology sparsification, not geometric pruning.
+- number_of_edges_removed_by_geometric_pruning counts only edges removed from the
+  existing default topology by edge_strict; default and edge_dense record zero.
+
+Start/goal handling
+-------------------
+- make_entry_from_stones and expand_shorthand form initial/final double-support foot
+  poses from the first and last physical region centers.
+- Graph source is vertex 1 (D); graph sink is the last vertex (D).
+
+Planner/recovery settings held fixed
+------------------------------------
+- OptAPI formulation: build_gcs_model_VAE_optapi; step_span=0.7,
+  yaw bound=30 deg, M_large=1000,
+  M_small=1e-06, stance_width=0.25.
+- Recovery: greedy first, then relaxation_prob fallback, early stop at the first
+  acceptable fixed solution, total candidate budget=100.
+- Existing main_VAE_optapi.py uses seed=None inside probabilistic recovery. This
+  experiment supplies SeedSequence-derived seeds shared by every configuration
+  to meet the paired reproducibility requirement.
+- Cooperative per-trial planning deadline=5 seconds;
+  an already-running MOSEK optimize call is not interrupted, matching the existing wrapper.
+
+Validation
+----------
+Default equivalence validation: PASS for terrain 0 using the same selected discrete path (existing graph/model/fixed-solver calls vs Com10_3 default).
+The existing timed recovery wrapper is not used for this comparison because it calls probabilistic recovery with seed=None.

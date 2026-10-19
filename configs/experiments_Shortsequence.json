@@ -1,0 +1,28 @@
+{
+  "test_00": {
+    "start": { "center": [2.5, 0.5, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [2.5, 1.0, 0.0], "heading_deg": 90.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 0.0, "goal_R": 0.0 }
+  },
+  "test_01": {
+    "start": { "center": [2.5, 1.0, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [2.5, 1.5, 0.0], "heading_deg": 90.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 0.0, "goal_R": 0.0 }
+  },
+  "test_02": {
+    "start": { "center": [2.5, 1.5, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [2.5, 2.0, 0.0], "heading_deg": 90.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 0.0, "goal_R": 0.0 }
+  },
+  "test_03": {
+    "start": { "center": [2.5, 2.0, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [2.7, 2.4, 0.0], "heading_deg": 30.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": -60.0, "goal_R": -60.0 }
+  },
+  "test_04": {
+    "start": { "center": [2.7, 2.4, 0.0], "heading_deg": 30.0 },
+    "goal":  { "center": [2.9, 2.5, 0.0], "heading_deg": -30.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": -60.0, "goal_R": -60.0 }
+  }
+
+}

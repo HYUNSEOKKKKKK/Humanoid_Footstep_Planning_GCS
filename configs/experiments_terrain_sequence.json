@@ -1,0 +1,7 @@
+{
+  "test_01": {
+    "start": { "center": [1.5, 1.5, 0.0], "heading_deg": 90.0 },
+    "goal":  { "center": [1.5, 3.5, 0.0], "heading_deg": 180.0 },
+    "foot_yaw_deg": { "start_L": 0.0, "start_R": 0.0, "goal_L": 90.0, "goal_R": 90.0 }
+  }
+}
