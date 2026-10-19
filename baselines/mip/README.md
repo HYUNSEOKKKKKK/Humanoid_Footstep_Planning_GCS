@@ -6,7 +6,7 @@ Use the [root README](../../README.md) for installation and the three-planner co
 From the repository root:
 
 ```bash
-conda activate footstep_planner_paper
+conda activate footstep_planner
 python -m experiments.compare_terrains --planners mip --output-dir outputs/mip_comparison
 ```
 
