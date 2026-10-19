@@ -1,7 +1,7 @@
 """
 TORO humanoid walking visualization in MuJoCo (kinematic, no physics).
-Run:  conda activate mujoco_env && python toro_walk.py
-      conda activate mujoco_env && python toro_walk.py --render  # save video
+Run:  conda activate footstep_planner && python toro_walk.py
+      conda activate footstep_planner && python toro_walk.py --render  # save video
 """
 import numpy as np
 import mujoco

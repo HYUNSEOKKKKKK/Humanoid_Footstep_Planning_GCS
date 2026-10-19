@@ -29,6 +29,8 @@ python -m experiments.verify_artifacts
 The Conda file installs Python, FFmpeg, and the pinned Python dependencies in
 `requirements.lock.txt`. `requirements.txt` lists the direct dependencies. The
 original C++ prototype is optional; there is no build step for the Python workflow.
+The same `footstep_planner` environment runs GCS, CVAE, both comparison baselines,
+and the TORO/MuJoCo visualization.
 
 **MOSEK requires your own valid license** to solve GCS and MIP problems. Place it
 at `~/mosek/mosek.lic`, or configure another location:

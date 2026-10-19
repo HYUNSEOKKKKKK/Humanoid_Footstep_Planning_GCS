@@ -1,8 +1,8 @@
 """
 DLR TORO humanoid walking visualization – real upper-body meshes + leg meshes.
 Run:
-  conda activate mujoco_env && python toro_real_walk.py            # interactive
-  conda activate mujoco_env && python toro_real_walk.py --render   # save MP4
+  conda activate footstep_planner && python toro_real_walk.py            # interactive
+  conda activate footstep_planner && python toro_real_walk.py --render   # save MP4
 """
 import numpy as np
 import mujoco

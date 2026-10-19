@@ -1,3 +1,5 @@
+# Historical standalone specification. For the integrated paper workflow, use
+# the repository-root environment.yml and conda activate footstep_planner.
 name: footstep_mip
 channels:
   - conda-forge

@@ -1,9 +1,9 @@
 """
 Footstep-plan-driven TORO walking visualization.
 Run:
-  conda activate mujoco_env && python toro_footstep_walk.py                          # save result/toro_footstep.mp4  (default)
-  conda activate mujoco_env && python toro_footstep_walk.py --interactive            # open interactive viewer
-  conda activate mujoco_env && python toro_footstep_walk.py --cam-elevation -20      # custom camera angle
+  conda activate footstep_planner && python toro_footstep_walk.py                          # save result/toro_footstep.mp4  (default)
+  conda activate footstep_planner && python toro_footstep_walk.py --interactive            # open interactive viewer
+  conda activate footstep_planner && python toro_footstep_walk.py --cam-elevation -20      # custom camera angle
 """
 import numpy as np
 import mujoco

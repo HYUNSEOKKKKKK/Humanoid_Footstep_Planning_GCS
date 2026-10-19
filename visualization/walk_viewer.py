@@ -1,6 +1,8 @@
 """
 Humanoid walking visualization using MuJoCo + dm_control.
-실행: conda activate mujoco_env && python walk_viewer.py
+Optional historical demo requiring dm_control. For the paper's TORO replay,
+use replay_plan.py with the shared project environment.
+실행: conda activate footstep_planner && python walk_viewer.py
 """
 import numpy as np
 import mujoco
