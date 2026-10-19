@@ -4,7 +4,7 @@
 
 Accepted for publication in **IEEE Robotics and Automation Letters (RA-L), 2026**, submission **26-2531**.
 
-[Accepted manuscript](paper/26-2531_03_MS.pdf) · [Supplementary video](paper/Video_Final.mp4) · [Reproduction guide](docs/reproduction.md)
+[Project page](https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/) · [Accepted manuscript](paper/26-2531_03_MS.pdf) · [Supplementary video](paper/Video_Final.mp4) · [Reproduction guide](docs/reproduction.md)
 
 This branch contains the GCS footstep planner, pretrained CVAE terrain generator,
 A* and MIP comparison implementations, benchmark terrains, archived experimental
@@ -167,6 +167,7 @@ data/terrains/               Preserved benchmark inputs
 data/reference/              Original experimental CSVs and Pump logs
 data/legacy/                 Earlier input samples retained for provenance
 paper/                       Final submitted paper, video, source, and artifact hashes
+website/                     GitHub Pages project page and deployment instructions
 outputs/                     New runtime results; ignored by Git
 docs/                        Reproduction details, source mapping, and hardware scope
 ```

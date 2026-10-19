@@ -1,0 +1,42 @@
+name: Publish paper page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'paper/26-2531_03_MS.pdf'
+      - 'paper/Video_Final.mp4'
+      - '.github/workflows/paper-page.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare and check the static page
+        run: python3 website/build.py
+      - name: Check JavaScript syntax
+        run: node --check website/dist/app.js
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload page artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website/dist
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

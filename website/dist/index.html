@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="GCS-based humanoid footstep planning: jointly choosing stepping sequences and continuous foot placements, with real-world validation on TORO. Accepted to IEEE RA-L 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Humanoid Footstep Planning using Graphs of Convex Sets">
+  <meta property="og:description" content="A unified framework for discrete stepping decisions and continuous foot placement. IEEE Robotics and Automation Letters, 2026.">
+  <meta property="og:url" content="https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/">
+  <meta property="og:image" content="https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/assets/teaser-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="Humanoid Footstep Planning using Graphs of Convex Sets">
+  <meta name="citation_author" content="Hyunseok Kim">
+  <meta name="citation_author" content="George Mesesan">
+  <meta name="citation_author" content="Robert Schuller">
+  <meta name="citation_author" content="Jinoh Lee">
+  <meta name="citation_author" content="Hae-Won Park">
+  <meta name="citation_journal_title" content="IEEE Robotics and Automation Letters">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/assets/paper.pdf">
+  <link rel="canonical" href="https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Humanoid Footstep Planning using Graphs of Convex Sets</title>
+  <script src="app.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Humanoid Footstep Planning using Graphs of Convex Sets","author":[{"@type":"Person","name":"Hyunseok Kim"},{"@type":"Person","name":"George Mesesan"},{"@type":"Person","name":"Robert Schuller"},{"@type":"Person","name":"Jinoh Lee"},{"@type":"Person","name":"Hae-Won Park"}],"isPartOf":{"@type":"Periodical","name":"IEEE Robotics and Automation Letters"},"datePublished":"2026","url":"https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/","encoding":{"@type":"MediaObject","contentUrl":"https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/assets/paper.pdf","encodingFormat":"application/pdf"}}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M10 11H4V7h6v7a4 4 0 0 1-4 4m14-7h-6V7h6v7a4 4 0 0 1-4 4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="12" rx="2"/><path d="M15 9V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h4"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M8 10.5h5m-2.5-2.5v5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#main" aria-label="Footstep planning, top of page">
+        <svg class="brand-mark" viewBox="0 0 44 28" aria-hidden="true"><path d="m8 20 14-13 14 13"/><circle cx="8" cy="20" r="4"/><circle cx="22" cy="7" r="4"/><circle cx="36" cy="20" r="4"/></svg>
+        <span>Footstep Planning<span class="brand-suffix"> / GCS</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#video">Video</a><a href="#citation">Citation</a>
+        <a class="nav-code" href="https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="paper-title">
+      <p class="venue"><span class="venue-dot" aria-hidden="true"></span> IEEE Robotics and Automation Letters <span class="venue-year">2026</span></p>
+      <h1 id="paper-title">Humanoid Footstep Planning<br class="desktop-break"> using <span>Graphs of Convex Sets</span></h1>
+      <p class="hero-subtitle">Jointly deciding which foot to move and where to place it.</p>
+      <div class="authors" aria-label="Paper authors">
+        <a href="https://github.com/HYUNSEOKKKKKK" target="_blank" rel="noopener noreferrer">Hyunseok Kim<sup>1</sup></a>
+        <span>George Mesesan<sup>2</sup></span>
+        <span>Robert Schuller<sup>2,3</sup></span>
+        <span>Jinoh Lee<sup>1,2,†</sup></span>
+        <span>Hae-Won Park<sup>1,†</sup></span>
+      </div>
+      <p class="affiliations"><span><sup>1</sup> KAIST</span><span><sup>2</sup> German Aerospace Center (DLR)</span><span><sup>3</sup> Technical University of Munich</span></p>
+      <p class="correspondence"><sup>†</sup> Corresponding authors · <span>Accepted for publication</span></p>
+      <div class="resource-links" aria-label="Research resources">
+        <a class="button button-primary" href="assets/paper.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-paper"/></svg> Paper <span class="button-detail">PDF</span></a>
+        <a class="button" href="#video"><svg class="icon"><use href="#i-play"/></svg> Video</a>
+        <a class="button" href="https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-code"/></svg> Code</a>
+        <a class="button" href="#citation"><svg class="icon"><use href="#i-quote"/></svg> BibTeX</a>
+      </div>
+
+      <figure class="teaser">
+        <div class="teaser-media">
+          <video id="teaser-video" autoplay muted loop playsinline preload="metadata" poster="assets/teaser-poster.jpg" aria-label="TORO performing the Pump It Up stepping task, excerpt from the supplementary video">
+            <source src="assets/teaser.mp4" type="video/mp4">
+          </video>
+          <span class="media-label"><span aria-hidden="true"></span> TORO · Real-world deployment</span>
+          <button id="teaser-toggle" class="teaser-toggle" type="button" aria-label="Pause preview" aria-pressed="false">Pause preview <span aria-hidden="true">Ⅱ</span></button>
+        </div>
+        <figcaption>From discrete stepping decisions to continuous foot placements—online, on a humanoid robot.<a href="#video">Watch the full video <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+    </section>
+
+    <section class="abstract-section" id="overview" aria-labelledby="abstract-heading">
+      <div class="container abstract-layout">
+        <div class="section-intro"><p class="eyebrow">The idea</p><h2 id="abstract-heading">Discrete choices.<br>Continuous motion.</h2><p class="section-aside">A unified footstep planner for constrained terrain and time-critical stepping.</p></div>
+        <div class="abstract-text">
+          <p>Footstep planning for humanoid robots requires simultaneously reasoning over discrete stepping sequences and continuous foot placements under strict time budgets. In this paper, we propose a graph-based optimization approach for humanoid footstep planning within the Graphs of Convex Sets (GCS) framework.</p>
+          <p>We first formulate a nonconvex quadratically constrained quadratic program (QCQP) that captures terrain feasibility and kinematic reachability. We then construct a mode-aware graph, where each node represents a kinematically feasible convex region associated with a locomotion mode and each edge encodes a feasible transition. By integrating the QCQP formulation with the graph structure, we cast the planning problem within the GCS framework and apply semidefinite programming to obtain a convex relaxation that does not require an initial discrete path or initial values for the continuous variables.</p>
+          <p>We validate the proposed planner through real-world deployment on the torque-controlled humanoid robot in a rhythm-based stepping scenario, where footsteps must be planned within strict timing constraints. These results show that the method can compute high-quality footstep plans within real-time budgets, enabling reliable execution and validation on humanoid hardware.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="method" aria-labelledby="method-heading">
+      <div class="section-heading"><div><p class="eyebrow">Method</p><h2 id="method-heading">Footstep planning, through a convex lens.</h2></div><span class="figure-hint"><svg class="icon"><use href="#i-zoom"/></svg> Click a figure to explore</span></div>
+      <p class="section-lead">A mode-aware graph connects feasible foothold regions. Convex relaxation lets us reason over stepping sequences and foot poses together, followed by path recovery and refinement.</p>
+      <figure class="paper-figure method-figure">
+        <button class="figure-button" type="button" data-zoom="assets/method.webp" data-caption="Planning pipeline: nonconvex QCQP, mode-aware graph, GCS relaxation and path recovery." aria-label="Enlarge the planning pipeline figure"><img src="assets/method.webp" width="6776" height="1814" alt="Three-stage planning pipeline showing the QCQP terrain and reachability formulation, a graph over support modes and convex regions, and the GCS relaxation and recovery procedure." loading="lazy"></button>
+        <figcaption>The proposed planning pipeline. Figure 2 from the accepted manuscript.</figcaption>
+      </figure>
+      <ol class="method-steps">
+        <li><span class="step-number">01</span><div><h3>Formulate the footstep problem</h3><p>Combine terrain feasibility, kinematic reachability, and footstep costs in a nonconvex QCQP.</p></div></li>
+        <li><span class="step-number">02</span><div><h3>Build a mode-aware graph</h3><p>Associate convex terrain regions with support modes and connect feasible transitions.</p></div></li>
+        <li><span class="step-number">03</span><div><h3>Relax, recover, refine</h3><p>Solve the convex relaxation, recover a discrete path, then refine the continuous foot placements.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="experiments-section" id="experiments" aria-labelledby="experiments-heading">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Experiments</p><h2 id="experiments-heading">From stepping stones to the dance floor.</h2></div></div>
+        <p class="section-lead">We evaluate challenging CVAE-generated terrains, examine graph construction, and deploy the planner on TORO in the rhythm-based <em>Pump It Up</em> task.</p>
+        <div class="result-highlights">
+          <div><strong>&lt;200<span> ms</span></strong><p>Average planning time<br><span>during TORO deployment</span></p></div>
+          <div><strong>&lt;0.3<span>%</span></strong><p>Relaxation gap<br><span>Pump label windows W = 3–9</span></p></div>
+          <div><strong>3<span> planners</span></strong><p>GCS, graph-based, optimization-based<br><span>on a shared terrain benchmark</span></p></div>
+        </div>
+        <div class="results-grid">
+          <article class="result-item"><span class="result-index">01 / Terrain benchmark</span><h3>Feasible plans within practical time budgets</h3><p>Compare normalized success rates across three difficulty settings. Success is normalized over terrains solved by at least one planner.</p>
+            <figure class="paper-figure"><button class="figure-button" type="button" data-zoom="assets/benchmark.webp" data-caption="Normalized success rate versus computation time across CVAE terrain difficulty levels (Figure 4)." aria-label="Enlarge the terrain benchmark results"><img src="assets/benchmark.webp" width="2244" height="1240" alt="Success-rate curves versus computation time for the proposed, graph-based, and optimization-based planners at three terrain difficulty levels." loading="lazy"></button><figcaption>Figure 4 · CVAE-generated stepping-stone terrains.</figcaption></figure>
+          </article>
+          <article class="result-item"><span class="result-index">02 / Graph construction</span><h3>The graph matters</h3><p>Vertex duplication controls the stepping sequences the graph can represent, revealing a tradeoff between expressiveness and computation time.</p>
+            <figure class="paper-figure"><button class="figure-button" type="button" data-zoom="assets/duplication.webp" data-caption="Sensitivity to vertex duplication: normalized success rates and median computation times with interquartile ranges (Figure 5)." aria-label="Enlarge the graph construction sensitivity results"><img src="assets/duplication.webp" width="3048" height="1078" alt="Bars and timing markers comparing under-duplicated, nominal, double, triple, and quadruple vertex duplication settings." loading="lazy"></button><figcaption>Figure 5 · Vertex duplication sensitivity.</figcaption></figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container hardware-section" aria-labelledby="hardware-heading">
+      <div class="hardware-layout">
+        <figure class="hardware-photo"><img src="assets/hero.webp" width="2496" height="2160" alt="The torque-controlled TORO humanoid standing on the arrow panels of a Pump It Up dance pad in front of the game screen." loading="lazy"><figcaption>TORO performing the rhythm-based stepping task.</figcaption></figure>
+        <div class="hardware-copy"><p class="eyebrow">On the real robot</p><h2 id="hardware-heading">Every new symbol.<br>A new footstep plan.</h2><p>The upcoming game labels specify where TORO needs to step, but not which foot should move or its exact pose. The planner resolves both choices in a receding-horizon loop.</p><p>Each new symbol updates a six-label window. The entire plan is recomputed while respecting terrain and reachability constraints, then passed to the robot’s motion-planning and control pipeline.</p><p class="hardware-note">27 DoF · 1.74 m · 79.2 kg<br>Planning on an Intel Core i7-10700K desktop.</p><a class="text-link" href="#video">See the hardware experiment <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="deployment-results">
+        <figure class="paper-figure"><button class="figure-button" type="button" data-zoom="assets/timing.webp" data-caption="Planning-pipeline timing breakdown during real-world deployment (Figure 7)." aria-label="Enlarge the deployment timing breakdown"><img src="assets/timing.webp" width="4778" height="2654" alt="Average runtime and relative share for graph construction, model building, the relaxed solve, and path search with a fixed-path solve." loading="lazy"></button><figcaption>Figure 7 · Planning-pipeline timing during deployment.</figcaption></figure>
+        <figure class="paper-figure"><button class="figure-button" type="button" data-zoom="assets/relaxation.webp" data-caption="Relaxed objective versus relaxation gap for Pump label windows W = 3–9 (Figure 8)." aria-label="Enlarge the relaxation-gap results"><img src="assets/relaxation.webp" width="1654" height="1228" alt="Scatter plot of relaxed objective against relaxation gap for different Pump label-window lengths." loading="lazy"></button><figcaption>Figure 8 · Relaxation tightness in the Pump scenario.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="video-section" id="video" aria-labelledby="video-heading">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">See it in action</p><h2 id="video-heading">The complete story, in four minutes.</h2></div><span class="video-duration">Supplementary video · 4:24</span></div>
+        <video id="overview-video" class="overview-video" controls playsinline preload="none" poster="assets/video-poster.jpg" aria-label="Full supplementary video explaining the GCS method, terrain evaluation, and TORO hardware experiments"><source src="assets/overview.mp4" type="video/mp4"><p>Your browser does not support embedded video. <a href="assets/overview.mp4">Download the supplementary video.</a></p></video>
+        <div class="video-chapters" aria-label="Video chapters"><span>Jump to</span><button type="button" data-video-time="12">Method <small>0:12</small></button><button type="button" data-video-time="94">Terrain evaluation <small>1:34</small></button><button type="button" data-video-time="160">Real-world deployment <small>2:40</small></button></div>
+        <p class="video-note">The original supplementary video accompanying the accepted manuscript. Preview footage above is an excerpt from this video.</p>
+      </div>
+    </section>
+
+    <section class="section container code-section" id="code" aria-labelledby="code-heading">
+      <div class="code-intro"><p class="eyebrow">Explore the research</p><h2 id="code-heading">Try the planner.</h2><p>The repository brings together the GCS planner, pretrained CVAE, A* and MIP comparison implementations, fixed terrain inputs, and a TORO kinematic viewer.</p><p class="code-note">Offline examples require no robot hardware. GCS and MIP solves require a valid MOSEK license.</p><a class="text-link" href="https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS" target="_blank" rel="noopener noreferrer">Code &amp; installation guide <svg class="icon"><use href="#i-arrow"/></svg></a><a class="secondary-link" href="https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS/blob/main/docs/reproduction.md" target="_blank" rel="noopener noreferrer">Reproduction details and figure provenance ↗</a></div>
+      <div class="terminal"><div class="terminal-top"><span><i></i><i></i><i></i></span><span>Get started</span><button class="copy-button" type="button" data-copy-target="quickstart" aria-label="Copy installation and demo commands"><svg class="icon"><use href="#i-copy"/></svg><span>Copy</span></button></div><pre><code id="quickstart">git clone https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS.git
+cd Humanoid_Footstep_Planning_GCS
+conda env create -f environment.yml
+conda activate footstep_planner_paper
+
+python main_VAE_optapi.py --no-show</code></pre><div class="terminal-bottom"><span class="terminal-dot"></span> A fixed terrain. A planned sequence of footsteps.</div></div>
+    </section>
+
+    <section class="citation-section" id="citation" aria-labelledby="citation-heading"><div class="container citation-layout"><div><p class="eyebrow">Citation</p><h2 id="citation-heading">BibTeX</h2><p>If you find this work useful, please consider citing our paper.</p><a class="secondary-link" href="assets/citation.bib" download>Download .bib ↗</a></div><div class="citation-code"><button class="copy-button" type="button" data-copy-target="bibtex" aria-label="Copy BibTeX citation"><svg class="icon"><use href="#i-copy"/></svg><span>Copy BibTeX</span></button><pre><code id="bibtex">@article{kim2026humanoidgcs,
+  title   = {Humanoid Footstep Planning using
+             Graphs of Convex Sets},
+  author  = {Kim, Hyunseok and Mesesan, George and
+             Schuller, Robert and Lee, Jinoh and
+             Park, Hae-Won},
+  journal = {IEEE Robotics and Automation Letters},
+  year    = {2026},
+  note    = {Accepted for publication}
+}</code></pre></div></div></section>
+  </main>
+
+  <footer class="site-footer container"><p>Humanoid Footstep Planning using Graphs of Convex Sets<br><span>KAIST · DLR · Technical University of Munich</span></p><a href="https://github.com/HYUNSEOKKKKKK/Humanoid_Footstep_Planning_GCS/tree/main/website" target="_blank" rel="noopener noreferrer">Page source <span aria-hidden="true">↗</span></a></footer>
+  <div class="sr-only" role="status" aria-live="polite" id="copy-status"></div>
+  <dialog id="figure-dialog" aria-label="Enlarged paper figure"><button class="dialog-close" type="button" aria-label="Close enlarged figure"><svg class="icon"><use href="#i-close"/></svg></button><img id="dialog-image" alt=""><p id="dialog-caption"></p><a id="dialog-original" target="_blank" rel="noopener noreferrer">Open full-size image ↗</a></dialog>
+</body>
+</html>

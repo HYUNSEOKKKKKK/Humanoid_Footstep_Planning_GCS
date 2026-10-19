@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hyunseokkkkkk.github.io/Humanoid_Footstep_Planning_GCS/sitemap.xml

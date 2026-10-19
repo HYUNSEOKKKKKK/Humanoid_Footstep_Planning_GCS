@@ -15,3 +15,8 @@ dist/
 *.opf
 mosek.lic
 .env
+
+# Staged by website/build.py from the canonical paper assets during deployment.
+!/website/dist/
+/website/dist/assets/paper.pdf
+/website/dist/assets/overview.mp4
