@@ -6,7 +6,7 @@ from __future__ import annotations
 This script is designed to be *PyCharm-friendly*:
 - You can run it with **no command-line arguments**.
 - Paths are resolved relative to the project root.
-- MOSEK license file is auto-detected (default: ~/mosek/mosek.lic) if env vars are not set.
+- MOSEK license is auto-detected at <repository>/.local/licenses/mosek.lic if env vars are not set.
 
 If you want to reproduce paper-like settings later, search for "EASY_MODE" below.
 """
@@ -23,6 +23,7 @@ import numpy as np
 
 # --- project root / import path ---
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 SRC_DIR = PROJECT_ROOT / "src"
 sys.path.insert(0, str(SRC_DIR))
 
@@ -50,7 +51,7 @@ SHOW_PLOT = True
 SAVE_PNG = True
 
 # MOSEK license file (user-specific). You can also set env vars instead.
-DEFAULT_MOSEK_LICENSE = Path.home() / "mosek" / "mosek.lic"
+DEFAULT_MOSEK_LICENSE = REPOSITORY_ROOT / ".local" / "licenses" / "mosek.lic"
 
 
 def _parse_pose_csv(s: str) -> FootPose:

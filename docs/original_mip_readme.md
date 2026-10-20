@@ -11,9 +11,11 @@ and quadratic terms are represented with conic constraints (Mixed-Integer Conic 
 - A working **MOSEK** installation (pip package `mosek`)
 - A valid **MOSEK license** (Personal Academic License is free for students/faculty)
 
-License file locations (typical):
-- Linux/macOS: `~/mosek/mosek.lic`
-- Windows: `%USERPROFILE%\mosek\mosek.lic`
+In the integrated `Humanoid_Footstep_Planning_GCS` project, the MIP runner
+auto-detects `<repository>/.local/licenses/mosek.lic` when no license environment
+variable is set. To configure the shared `footstep_planner` environment for both
+GCS and MIP, follow the [current installation guide](../README.md#1-install).
+The sections below preserve the original standalone package workflow.
 
 ## 1) Create conda environment (name: footstep_mip)
 

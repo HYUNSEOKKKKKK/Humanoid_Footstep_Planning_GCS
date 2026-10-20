@@ -32,16 +32,25 @@ original C++ prototype is optional; there is no build step for the Python workfl
 The same `footstep_planner` environment runs GCS, CVAE, both comparison baselines,
 and the TORO/MuJoCo visualization.
 
-**MOSEK requires your own valid license** to solve GCS and MIP problems. Place it
-at `~/mosek/mosek.lic`, or configure another location:
+**MOSEK requires your own valid license** to solve GCS and MIP problems. Save it
+as `.local/licenses/mosek.lic` in this repository (create the directory first),
+then configure the environment from the repository root:
 
 ```bash
-export MOSEKLM_LICENSE_FILE="$HOME/mosek/mosek.lic"
+mkdir -p .local/licenses
+# Save your own license file as .local/licenses/mosek.lic before solving.
+conda env config vars set -n footstep_planner MOSEKLM_LICENSE_FILE="$PWD/.local/licenses/mosek.lic"
+conda activate footstep_planner
 ```
 
-Licenses are obtained from [MOSEK](https://www.mosek.com/products/academic-licenses/)
-and are not included in this repository. Terrain sampling, saved-result analysis,
-and visualization of an existing plan work without a solver license.
+Conda applies this setting whenever you activate `footstep_planner`. If you move
+the repository, rerun the configuration command from its new location. For a
+license stored elsewhere, use that file's absolute path instead.
+
+Licenses are obtained from [MOSEK](https://www.mosek.com/products/academic-licenses/).
+The `.local/` directory is ignored by Git; licenses are not included in this
+repository. Terrain sampling, saved-result analysis, and visualization of an
+existing plan work without a solver license.
 
 ## 2. Plan footsteps on a benchmark terrain
 
